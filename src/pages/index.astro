@@ -27,15 +27,14 @@ import Layout from '../layouts/Layout.astro';
         Know what you're really buying before you contact the seller. Kick the Tires adds reliability intelligence directly to AutoScout24 listings — known issues, repair costs, and honest verdicts.
       </p>
       <a
+        id="hero-cta"
         href="#"
-        class="inline-flex items-center gap-2 bg-[#FBBC04] text-slate-900 font-semibold px-8 py-4 rounded-full shadow-md hover:bg-[#f5b400] transition-colors text-base"
+        class="inline-flex items-center bg-slate-200 text-slate-500 font-semibold px-8 py-4 rounded-full text-base cursor-not-allowed"
       >
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-        </svg>
-        Add to Chrome — It's Free
+        Coming Soon to Chrome Web Store
       </a>
       <p class="text-sm text-slate-400 mt-4">Works on AutoScout24.ch · More Marketplaces Coming Soon</p>
+      <p class="text-sm text-slate-400 mt-1">Leave your email to get notified at launch</p>
     </div>
   </section>
 
@@ -48,8 +47,12 @@ import Layout from '../layouts/Layout.astro';
       <div class="grid md:grid-cols-2 gap-12 md:gap-16">
         <!-- Feature 1 -->
         <div>
-          <div class="bg-slate-200 rounded-xl shadow-sm aspect-video flex items-center justify-center mb-8">
-            <span class="text-slate-400 text-sm">Screenshot: search results with verdict badges</span>
+          <div class="h-80 overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-8">
+            <img
+              src="/search-results.png"
+              alt="AutoScout24 search results with Kick the Tires verdict badges showing Recommended, Caution, and Avoid labels on each listing"
+              class="w-full h-full object-cover object-top"
+            />
           </div>
           <h3 class="text-xl font-semibold text-slate-900 mb-3">Instant verdicts on search results</h3>
           <p class="text-slate-600 leading-relaxed">
@@ -59,8 +62,12 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Feature 2 -->
         <div>
-          <div class="bg-slate-200 rounded-xl shadow-sm aspect-video flex items-center justify-center mb-8">
-            <span class="text-slate-400 text-sm">Screenshot: detail page HUD</span>
+          <div class="h-80 overflow-hidden rounded-xl shadow-lg border border-slate-200 mb-8">
+            <img
+              src="/detail-page.png"
+              alt="AutoScout24 car detail page showing the Kick the Tires panel with reliability ratings, known issues, repair costs, and questions to ask the seller"
+              class="w-full h-full object-cover object-top"
+            />
           </div>
           <h3 class="text-xl font-semibold text-slate-900 mb-3">The full picture on every car</h3>
           <p class="text-slate-600 leading-relaxed">
@@ -109,5 +116,35 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </footer>
+
+  <!-- Sticky CTA bar -->
+  <div
+    id="sticky-cta"
+    class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-200 shadow-lg py-3 translate-y-full transition-transform duration-300"
+  >
+    <div class="flex justify-center px-4">
+      <a
+        href="#"
+        class="inline-flex items-center bg-slate-200 text-slate-500 font-semibold px-8 py-4 rounded-full text-base cursor-not-allowed w-full max-w-sm justify-center md:w-auto"
+      >
+        Coming Soon to Chrome Web Store
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const heroCta = document.getElementById('hero-cta');
+    const stickyCta = document.getElementById('sticky-cta');
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        stickyCta.classList.add('translate-y-full');
+      } else {
+        stickyCta.classList.remove('translate-y-full');
+      }
+    });
+
+    observer.observe(heroCta);
+  </script>
 
 </Layout>
