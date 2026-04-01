@@ -50,3 +50,10 @@ Keep the screenshot placeholder divs but style them as polished empty states:
 - Subtle shadow
 - Placeholder text centered inside
 - aspect-video ratio maintained
+
+## Screenshots
+Replace the placeholder screenshot divs with actual images:
+- Feature 1 (search results): use /images/search-results.png
+- Feature 2 (detail page): use /images/detail-page.png
+Style them with rounded-xl, subtle shadow (shadow-lg), and border border-slate-200.
+Use standard <img> tags with alt text describing what the screenshot shows.
