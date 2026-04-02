@@ -16,15 +16,17 @@ import Layout from '../layouts/Layout.astro';
   </nav>
 
   <!-- Hero -->
-  <section class="py-32 md:py-40 px-6 text-center">
+  <section class="py-24 md:py-32 px-6 text-center">
     <div class="max-w-4xl mx-auto">
       <p class="text-[#FBBC04] font-semibold text-sm tracking-widest uppercase mb-6">Free Chrome Extension</p>
       <h1 class="text-5xl md:text-7xl font-bold text-slate-900 leading-tight mb-8 tracking-tight">
-        The marketplace works for dealers.<br />
-        <span class="text-[#FBBC04]">Kick the Tires works for you.</span>
+        Know if a used car is a good deal <span class="text-[#FBBC04]">— instantly</span>
       </h1>
       <p class="text-xl text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto">
-        Know what you're really buying before you contact the seller. Kick the Tires adds reliability intelligence directly to AutoScout24 listings — known issues, repair costs, and honest verdicts.
+        The marketplace works for dealers. Kick the Tires works for you.
+      </p>
+      <p class="text-lg text-slate-600 leading-relaxed mb-10 max-w-3xl mx-auto">
+        Get a clear verdict on every AutoScout24 listing: Recommended, Caution, or Avoid. See hidden issues, repair costs in CHF, and what sellers don't tell you — before you even contact the seller.
       </p>
       <a
         id="hero-cta"
@@ -33,16 +35,16 @@ import Layout from '../layouts/Layout.astro';
       >
         Coming Soon to Chrome Web Store
       </a>
-      <p class="text-sm text-slate-400 mt-4">Works on AutoScout24.ch · More Marketplaces Coming Soon</p>
-      <p class="text-sm text-slate-400 mt-1">Leave your email to get notified at launch</p>
+      <p class="text-sm text-slate-500 mt-4 font-medium">Don't overpay on your next car.</p>
+      <p class="text-sm text-slate-400 mt-2">Works on AutoScout24.ch · More Marketplaces Coming Soon</p>
     </div>
   </section>
 
   <!-- How it works -->
   <section class="bg-slate-100">
-    <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-24">
       <p class="text-[#FBBC04] font-semibold text-sm tracking-widest uppercase mb-4">How it works</p>
-      <h2 class="text-4xl font-bold text-slate-900 mb-20">Reliability intel, right where you need it.</h2>
+      <h2 class="text-4xl font-bold text-slate-900 mb-20">See what the listing doesn't tell you.</h2>
 
       <div class="grid md:grid-cols-2 gap-12 md:gap-16">
         <!-- Feature 1 -->
@@ -54,9 +56,9 @@ import Layout from '../layouts/Layout.astro';
               class="w-full h-full object-cover object-top"
             />
           </div>
-          <h3 class="text-xl font-semibold text-slate-900 mb-3">Instant verdicts on search results</h3>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Spot bad deals instantly</h3>
           <p class="text-slate-600 leading-relaxed">
-            Every listing gets a verdict badge — <span class="text-emerald-600 font-medium">Recommended</span>, <span class="text-amber-500 font-medium">Caution</span>, or <span class="text-red-500 font-medium">Avoid</span> — so you can spot problem cars at a glance.
+            Every listing gets a clear verdict — <span class="text-emerald-600 font-medium">Recommended</span>, <span class="text-amber-500 font-medium">Caution</span>, or <span class="text-red-500 font-medium">Avoid</span> — so you can filter out risky cars at a glance.
           </p>
         </div>
 
@@ -69,21 +71,64 @@ import Layout from '../layouts/Layout.astro';
               class="w-full h-full object-cover object-top"
             />
           </div>
-          <h3 class="text-xl font-semibold text-slate-900 mb-3">The full picture on every car</h3>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Know the real cost of ownership</h3>
           <p class="text-slate-600 leading-relaxed">
-            Open the Kick the Tires panel on any detail page to see reliability and running cost ratings, known issues for that specific engine, typical repair costs in CHF, and questions to ask the seller.
+            Open the Kick the Tires panel to see known issues for that engine, typical repair costs in CHF, and smart questions to ask the seller.
           </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Why it matters -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-24">
+      <p class="text-[#FBBC04] font-semibold text-sm tracking-widest uppercase mb-4">Why it matters</p>
+      <h2 class="text-4xl font-bold text-slate-900 mb-6">Buying a used car is a gamble</h2>
+      <p class="text-slate-600 text-lg max-w-3xl mb-12">
+        Listings show what sellers want you to see. Kick the Tires helps you spot what they leave out.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div class="rounded-2xl border border-slate-200 p-6 md:p-8 bg-slate-50">
+          <h3 class="text-xl font-semibold text-slate-900 mb-4">Without Kick the Tires</h3>
+          <ul class="space-y-3 text-slate-600">
+            <li>Guess if the price is fair</li>
+            <li>Miss hidden reliability issues</li>
+            <li>Risk expensive surprises</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-[#FBBC04]/60 p-6 md:p-8 bg-amber-50/60 shadow-md">
+          <h3 class="text-xl font-semibold text-slate-900 mb-4">With Kick the Tires</h3>
+          <ul class="space-y-3 text-slate-700">
+            <li>Get an instant verdict</li>
+            <li>See common issues and likely repair costs</li>
+            <li>Contact sellers with confidence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="bg-slate-100 border-y border-slate-200/70">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-700 font-medium">Built for Swiss car buyers</div>
+        <div class="bg-white border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-700 font-medium">Works directly on AutoScout24.ch</div>
+        <div class="bg-white border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-700 font-medium">Chrome extension - no learning curve</div>
+        <div class="bg-white border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-700 font-medium">Buyer-first perspective</div>
+      </div>
+    </div>
+  </section>
+
   <!-- Supported models -->
   <section class="bg-white">
-    <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-24">
       <p class="text-[#FBBC04] font-semibold text-sm tracking-widest uppercase mb-4">Supported models</p>
-      <h2 class="text-4xl font-bold text-slate-900 mb-6">Growing coverage, starting with the most popular.</h2>
-      <p class="text-slate-600 mb-12 text-lg">Currently covering 7 popular models on AutoScout24.ch, with more added regularly.</p>
+      <h2 class="text-4xl font-bold text-slate-900 mb-6">Starting with the most popular models — and expanding fast</h2>
+      <p class="text-slate-600 mb-12 text-lg">Kick the Tires currently supports 7 popular models on AutoScout24.ch, with more added regularly.</p>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
@@ -99,10 +144,24 @@ import Layout from '../layouts/Layout.astro';
             {model}
           </div>
         ))}
-        <div class="bg-white border border-dashed border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-400 italic">
-          More coming soon…
+        <div class="bg-white border border-dashed border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-500 italic">
+          More coming soon - coverage is expanding regularly.
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bg-slate-100 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-6 py-16 md:py-20 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Don't overpay on your next car</h2>
+      <p class="text-lg text-slate-600 mb-8">Kick the Tires helps you spot bad deals before you even contact the seller.</p>
+      <a
+        href="#hero-cta"
+        class="inline-flex items-center bg-slate-200 text-slate-500 font-semibold px-8 py-4 rounded-full text-base cursor-not-allowed"
+      >
+        Coming Soon to Chrome Web Store
+      </a>
     </div>
   </section>
 
@@ -120,7 +179,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- Sticky CTA bar -->
   <div
     id="sticky-cta"
-    class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-200 shadow-lg py-3 translate-y-full transition-transform duration-300"
+    class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-slate-200 shadow-lg py-2.5 translate-y-full transition-transform duration-300"
   >
     <div class="flex justify-center px-4">
       <a
